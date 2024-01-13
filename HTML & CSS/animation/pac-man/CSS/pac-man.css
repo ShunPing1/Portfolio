@@ -1,0 +1,184 @@
+@keyframes pac-man {
+  50% {
+    background: conic-gradient(#ff0 0, #ff0 45deg, #ff0 45deg, #ff0 88deg, transparent 88deg, transparent 92deg, #ff0 92deg, #ff0 135deg, #ff0 135deg);
+  }
+  100% {
+    background: conic-gradient(#ff0 0, #ff0 45deg, transparent 45deg, transparent 90deg, transparent 90deg, transparent 135deg, #ff0 135deg);
+  }
+}
+@keyframes pac-man-emoji {
+  39% {
+    color: transparent;
+  }
+  40% {
+    color: #0ac;
+  }
+  90% {
+    color: #0ac;
+  }
+}
+@keyframes move {
+  40% {
+    right: -580px;
+    transform: translate(0, -50%) scaleX(1);
+  }
+  50% {
+    right: -580px;
+    transform: translate(0, -50%) scaleX(1);
+  }
+  51% {
+    transform: translate(0, -50%) scaleX(-1);
+  }
+  100% {
+    right: -30px;
+    transform: translate(0, -50%) scaleX(-1);
+  }
+}
+@keyframes small-pac-man {
+  50% {
+    background: conic-gradient(#fa0 0, #fa0 45deg, #fa0 45deg, #fa0 88deg, transparent 88deg, transparent 92deg, #fa0 92deg, #fa0 135deg, #fa0 135deg);
+  }
+  100% {
+    background: conic-gradient(#fa0 0, #fa0 45deg, transparent 45deg, transparent 90deg, transparent 90deg, transparent 135deg, #fa0 135deg);
+  }
+}
+@keyframes small-pac-man-size {
+  0%, 100% {
+    width: 20px;
+    height: 20px;
+  }
+  10%, 90% {
+    width: 50px;
+    height: 50px;
+  }
+  20%, 80% {
+    width: 100px;
+    height: 100px;
+  }
+  30%, 70% {
+    width: 150px;
+    height: 150px;
+  }
+  40%, 60% {
+    width: 230px;
+    height: 230px;
+  }
+}
+@keyframes small-pac-man-move {
+  50% {
+    left: 120%;
+  }
+  51% {
+    left: -120%;
+  }
+  60% {
+    left: -115%;
+  }
+  80% {
+    left: -70%;
+  }
+  100% {
+    left: -30%;
+  }
+}
+@keyframes ball {
+  0% {
+    width: 600px;
+  }
+  10% {
+    width: 600px;
+  }
+  40% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  51% {
+    width: 30px;
+  }
+  80% {
+    width: 480px;
+  }
+  85% {
+    width: 540px;
+  }
+  90%, 100% {
+    width: 600px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.wrap .container {
+  width: 1200px;
+  height: 90%;
+  background-color: #000;
+  padding: 20px;
+  position: relative;
+}
+.wrap .container .pac-man {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#ff0 0, #ff0 45deg, transparent 45deg, transparent 90deg, transparent 90deg, transparent 135deg, #ff0 135deg);
+  position: relative;
+  top: 50%;
+  right: -30px;
+  transform: translate(0, -50%);
+  animation: pac-man 0.5s infinite, move 15s linear infinite;
+  z-index: 9;
+}
+.wrap .container .pac-man::before, .wrap .container .pac-man::after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+}
+.wrap .container .pac-man::before {
+  top: 45%;
+  left: 110%;
+  background: conic-gradient(#fa0 0, #fa0 45deg, transparent 45deg, transparent 90deg, transparent 90deg, transparent 135deg, #fa0 135deg);
+  transform: translate(0, -45%);
+  animation: small-pac-man 0.2s infinite, small-pac-man-size 15s linear infinite, small-pac-man-move 15s infinite;
+}
+.wrap .container .pac-man::after {
+  top: 30%;
+  left: 45%;
+}
+.wrap .container .pac-man .pac-man-emoji {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+.wrap .container .pac-man .pac-man-emoji .fa-droplet {
+  font-size: 80px;
+  color: transparent;
+  animation: pac-man-emoji 15s infinite;
+}
+.wrap .container .ball {
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  transform: translate(0, -50%) scaleX(-1);
+  font-size: 100px;
+  line-height: 130px;
+  color: #ff0;
+  overflow: hidden;
+  animation: ball 15s linear 0s infinite;
+}/*# sourceMappingURL=pac-man.css.map */

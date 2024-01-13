@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+        }
+        /* nav */
+        .nav-all{
+            width: 100%;
+            height: 100px;
+            background-color: #ddd;
+            padding: 10px;
+
+        }
+
+        .menu-btn{
+            width: 60px;
+            height: 80px;
+            background-color: #333;
+            border-radius: 10px;
+            float: left;
+
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            line-height: 80px;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .logo:hover{
+            border-top:40px solid #000;
+            border-left:40px solid transparent;
+            border-right:40px solid transparent;
+            border-bottom:40px solid #000;
+            background-color: transparent;
+            font-size: 0;
+            line-height: 5px;
+            border-radius: 50%;
+            transform: rotate(90deg);
+            transition:  2s;
+        }
+
+        .nav-btn-Area{
+            /* width: 400px; */
+            font-size: 0;
+            height: 80px;
+            padding-top: 10px;
+            /* background-color: #aaf; */
+            float: right;
+            
+        }
+        .nav-btn{
+            width: 100px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            color: #000;
+            /* background-color: #fff; */
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            /* margin-left: 25px; */
+
+        }
+        
+
+
+        /* container Area */
+        .container{
+            width: 100%;
+            height: calc(100vh - 100px) ;
+        }
+        /* .content{
+            width: 100%;
+            height: 100%;
+        } */
+        .item{
+            width: 100%;
+            height: calc((100vh - 100px) / 3);
+            background-color: #afa;
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+        #item-L{ 
+            background-image: url(./img/img01.jpg);
+        }
+        #item-M{
+
+            background-image: url(./img/img02.jpg);
+        }
+        #item-R{
+            background-image: url(./img/img03.jpg);
+        }
+        .mask{
+            font-size: 0px;
+            color: #fff;
+            text-align: center;
+            line-height: calc((100vh - 100px) / 3);
+        }
+
+        .item:hover .mask{
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            font-size: 60px;
+            background-color: #000;
+            transition: 0.8s;
+            
+
+        }
+
+
+       
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="nav-all">
+            <div class="menu-btn"></div>
+            <div class="logo">LOGO</div>
+            <div class="nav-btn-Area">
+                <!-- <a target="_blank" class="nav-btn nav-btn-1" href="https://www.google.com.tw/?client=safari" > 
+                    <span class="google-blue">G</span><span class="google-red">o</span><span class="google-orange">o</span><span class="google-blue">g</span><span class="google-green">l</span><span class="google-red">e</span>
+                </a>
+                <a target="_blank" class="nav-btn nav-btn-2" href="https://tw.yahoo.com" >Yahoo</a>
+                <a target="_blank" class="nav-btn nav-btn-3" href="https://www.bing.com" >Bing</a> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                
+                <div class="item" id="item-L"><div class="mask">FIRST</div></div>
+                <div class="item" id="item-M"><div class="mask">SECOND</div></div>
+                <div class="item" id="item-R"><div class="mask">THIRD</div></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

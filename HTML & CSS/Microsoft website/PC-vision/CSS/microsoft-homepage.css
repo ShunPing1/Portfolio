@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.normal-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    /* background-color: #faa; */
+
+}
+
+.full-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+}
+
+nav {
+    height: 54px;
+    padding: 5px;
+}
+
+.logo {
+    line-height: 54px;
+    padding: 0 5px;
+}
+
+.logo>img {
+    width: 108px;
+    height: 23px;
+}
+
+
+.menu {
+    font-size: 13px;
+    list-style: none;
+    display: flex;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu.menu-1 {
+    /* .menu-1靠左 */
+    margin-right: auto;
+}
+
+.menu-li {
+    padding: 16px 10px 10px;
+    /* margin: 10px; */
+}
+
+.menu-li .text {
+    display: inline-block;
+}
+
+
+
+.menu-li:hover>.text {
+    border-bottom: 2px solid #000;
+}
+
+.menu-li:focus>.text {
+    border-bottom: 2px solid #000;
+}
+
+.logo:focus,
+.menu-li:focus {
+    outline: 1px dashed #000;
+}
+
+/* header */
+.swiper>img {
+    width: 100%;
+}
+
+/* main */
+.all-choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.choice {
+    text-align: center;
+
+}
+
+.choice.choice-2 {
+    margin: 0 30px;
+}
+
+.choice-href {
+    display: block;
+    color: #0067b8;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+
+
+}
+.choice-text{
+    padding: 2px
+}
+
+/* blue dotted :focus */
+.choice-text:focus,
+.all-content .content .link:focus{
+    outline: 3px dotted #0067b8;
+}
+
+
+.all-content {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.all-content>.content {
+    background-color: #fff;
+    flex: 1;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 12px;
+}
+
+.pic>img {
+    width: 100%;
+}
+
+.all-content>.content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.all-content>.content>p,
+.link {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.all-content a {
+    text-decoration: none;
+    color: #000;
+}
+
+.content .link {
+    width: auto;
+    display: inline-block;
+    font-weight: 600;
+    color: #0067b8;
+    padding: 0px 30px 0px 2px;
+    margin: 16px 0px;
+}
+.content .link span{
+    margin: 0;
+    position: relative;
+}
+.content .link span::after{
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-image: url(../img/arrow/arrow.png);
+    background-position: center;
+    background-size: contain;
+    transition: 0.5s;
+}
+.content .link span:hover{
+    border-bottom: 2px solid #0067b8;
+}
+.content .link:hover >span::after{
+    content: " ";
+    left: 105%;
+}
+.link.link-1{
+    margin: 8px 0px;
+}
+
+.advertise>img {
+    padding-top: 50px;
+    width: 100%;
+}
+
+/* business */
+.all-content>h2 {
+    width: 100%;
+    margin-left: 12px;
+}
+
+/* other */
+.other {
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 13px;
+}
+
+.follow {
+    width: 100%;
+    margin: 0 0 50px 5px;
+
+}
+
+.follow a {
+    margin: 0 10px;
+}
+
+.follow a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+/* footer */
+footer {
+    background-color: #eee;
+    /* 讓footer-nav換行 */
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footer-ul {
+    width: calc(90% / 6);
+    list-style: none;
+
+}
+
+.footer-ul h2 {
+    font-size: 1rem;
+    font-size: 12px;
+    color: #616161;
+    padding: 36px 0px 4px;
+}
+
+.footer-ul a {
+    text-decoration: none;
+    font-size: 11px;
+    padding: 4px;
+    color: #616161;
+}
+
+.footer-ul li {
+    width: auto;
+    padding: 8px 0px;
+}
+
+/* footer hover */
+.footer-href:hover .footer-span {
+    border-bottom: 1px solid #000;
+
+}
+
+.footer-href:focus .footer-span {
+    border-bottom: 1px solid #000;
+
+}
+
+.footer-span:focus {
+    border: 1px dashed #000;
+}
+
+.footer-nav {
+    width: 90%;
+    font-size: 11px;
+    margin: auto;
+    padding: 30px 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav-all {
+    display: flex;
+    list-style: none;
+}
+
+.footer-nav-all>li {
+    padding: 0 24px 4px 0;
+    color: #616161;
+    margin-right: 5px;
+}
+
+.footer-nav-all a{
+    text-decoration: none;
+    color: #616161;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floatHW03</title>
+    <style>
+        #all{
+            width: 600px;
+            height: 700px;
+            background-color: #eee;
+        }
+        #top{
+            width: 600px;
+            height: 150px;
+            background-color: #faa;
+        }
+        #middle{
+            width: 600px;
+            height: 390px;
+            background-color: #fa0;
+        }
+        #m-left{
+            width: 500px;
+            height: 300px;
+            background-color: #000;
+            float: left;
+        }
+        #m-left #m-leftTop{
+            width: 500px;
+            height: 240px;
+            background-color: #eee;
+        } 
+        #m-l-t-left{
+            width: 100px;
+            height: 240px;
+            background-color: #ffa;
+            float: left;
+            
+            
+            
+        } 
+        #m-leftTop #m-l-t-rightTop{
+            width: 400px;
+            height: 80px;
+            background-color: #aaf;
+            float: left;
+            
+
+        } 
+        #m-leftTop #m-l-t-rightMiddle{
+            width: 400px;
+            height: 80px;
+            background-color: #818;
+            float: left;
+            
+        } 
+        #m-leftTop #m-l-t-rightBottom{
+            width: 400px;
+            height: 80px;
+            background-color: #f08;
+            float: left;
+            
+        } 
+
+        #m-left #m-leftBottom{
+            width: 500px;
+            height: 150px;
+            background-color: #222;
+        } 
+        #m-leftBottom #m-l-b-1{
+            width: 500px;
+            height: 75px;
+            background-color: #181;
+        } 
+        #m-leftBottom #m-l-b-2{
+            width: 500px;
+            height: 75px;
+            background-color: #aad;
+        } 
+
+        #m-right{
+            width: 100px;
+            height: 390px;
+            background-color: rgb(243, 204, 204);
+            float: left;
+            
+        }   
+        
+        #bottom{
+            width: 600px;
+            height: 150px;
+            background-color: rgb(104, 63, 9);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="top"></div>
+        <div id="middle">
+            
+                <div id="m-left">
+                    <div id="m-leftTop">
+                        <div id="m-l-t-left"></div>
+                        <div id="m-l-t-rightTop"></div>
+                        <div id="m-l-t-rightMiddle"></div>
+                        <div id="m-l-t-rightBottom"></div>
+                    </div>
+                    <div id="m-leftBottom">
+                        <div id="m-l-b-1"></div>
+                        <div id="m-l-b-2"></div>
+                    </div>
+                </div>
+                <div id="m-right"></div>
+            
+            
+        </div>
+        <div id="bottom"> </div>
+    </div>
+    
+</body>
+</html>

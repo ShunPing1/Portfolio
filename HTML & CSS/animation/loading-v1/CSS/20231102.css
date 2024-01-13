@@ -1,0 +1,36 @@
+.container-1 {
+  background-color: #eee;
+  font-size: 24px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.container-1 .item1-1 {
+  width: 100px;
+  height: 50px;
+  background-color: #faa;
+}
+.container-1 .item1-2 {
+  width: 80px;
+  height: 100px;
+  background-color: #aaf;
+}
+
+.container-2 {
+  width: 300px;
+  height: 300px;
+  margin-left: 310px;
+  background-color: #ccc;
+  position: relative;
+}
+.container-2::after {
+  content: "AFTER";
+  width: 300px;
+  height: 300px;
+  font-size: 60px;
+  text-align: center;
+  line-height: 300px;
+  background-color: #faa;
+  position: absolute;
+  top: 0;
+  left: 310px;
+}/*# sourceMappingURL=20231102.css.map */
