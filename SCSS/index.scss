@@ -12,7 +12,7 @@ nav{
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
-        position: relative;
+        position: fixed;
         .ham-menu{
             width: 50px;
             height: 50px;
@@ -70,7 +70,6 @@ nav{
         #ham-check:checked + .ham-menu > .line:nth-of-type(2){
             display: none;
         }
-        
         #ham-check:checked + .ham-menu > .line:last-child{
             top: 50%;
             transform: translate(-50%,-50%) rotate(-45deg);
@@ -81,7 +80,56 @@ nav{
 }
 
 main{
+    // nav高度
+    padding-top: 60px;
+    max-width: 80%;
+    margin: auto;
+    .about-me{
+        background-color: #faa;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        .avator{
+            width: 180px;
+            height: 180px;
+            background-color: #aaa;
+            border-radius: 50%;
+        }
+        .container{
+            h2{
+                font-size: 20px;
+            }
+            p{
+                text-align: justify;
+                text-indent: 1em;
+            }
+        }
+        .skill{
+            display: flex;
+            gap: 5px;
+            font-size: 32px;
+            .skill-btn{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                background-color: #aaf;
+                border-radius: 50px;
+                transition: 2s;
+                &:hover{
+                    background-color: #fff;
+                    transform: rotateY(-180deg);
+                }
+            }
+        }
+        .name-area{
+            
+        }
 
+    }
+    
 }
 footer{
 
