@@ -117,10 +117,34 @@ body{
                     line-height: 40px;
                     background-color: #aaf;
                     border-radius: 50px;
-                    transition: 2s;
+                    position: relative;
+                    transition: 1s;
+
+                    &::after{
+                        content: '111';
+                        font-size: 18px;
+                        position: absolute;
+                        visibility: hidden;
+                        top: 0%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: 0s 0.1s;
+
+
+                    }
+
                     &:hover{
                         background-color: #fff;
                         transform: rotateY(-180deg);
+                        .fa-brands{
+                            visibility: hidden;
+                            transition: 0.1s;
+                        }
+                        &::after{
+                            visibility: visible;
+                            transform: translateX(-50%) rotateY(-180deg);
+                            // transition: 0s;
+                        }
                     }
                 }
             }
