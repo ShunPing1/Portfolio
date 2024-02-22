@@ -41,49 +41,54 @@
         </label>
         <ul class="nav-btn">
             <li><a href="#">關於我</a></li>
-            <li><a href="#portfolio">作品集</a></li>
+            <li><a href="#contact-portfolio">作品集</a></li>
             <li><a href="#footer">聯絡資訊</a></li>
         </ul>
     </nav>
 
     <!-- 主要內容：關於我、作品集 -->
     <main>
-        <section class="about-me">
-            <h1>關於我</h1>
-            <div class="container name-area">
-                <div class="avator"></div>
-                <h1>楊順評</h1>
-                <h2 class="en-name">Shun Ping,Yang</h2>
-            </div>
-            <div class="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste possimus labore ipsa velit
-                    exercitationem odit quisquam quam ab alias dicta? Doloribus nemo repellat pariatur atque nam animi
-                    eius. Quos, explicabo!</p>
-            </div>
-            <div class="container">
-                <h2>技能</h2>
-                <hr>
-                <div class="content skill">
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-vuejs"></i>
-                    </div>
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-figma"></i>
-                    </div>
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-                    <div class="skill-btn">
-                        <i class="fa-brands fa-bootstrap"></i>
-                    </div>
+        <section id="about-me">
+            <h1 class="title">關於我</h1>
+            <section class="about-top">
+                <div class="container name-area">
+                    <div class="avator"></div>
+                    <h1>楊順評</h1>
+                    <h2 class="en-name">Shun Ping,Yang</h2>
                 </div>
-            </div>
+                <div class="container about-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste possimus labore ipsa velit
+                        exercitationem odit quisquam quam ab alias dicta? Doloribus nemo repellat pariatur atque nam
+                        animi
+                        eius. Quos, explicabo!</p>
+                    <div class="skill-wrap">
+                        <h2>技能</h2>
+                        <hr>
+                        <div class="content skill">
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-vuejs"></i>
+                            </div>
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-figma"></i>
+                            </div>
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="skill-btn">
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             <div class="container">
                 <h2>學歷</h2>
                 <hr>
@@ -92,14 +97,6 @@
                     <div class="item">資訊科技系碩士學位 2021/9~2023/7</div>
                     <div class="item">嶺東科技大學</div>
                     <div class="item">資訊科技系學士學位 2018/9~2021/6</div>
-                </div>
-            </div>
-            <div class="container">
-                <h2>專業培訓</h2>
-                <hr>
-                <div class="content">
-                    <div class="item">逢甲大學 & 勞動部發展署</div>
-                    <div class="item">Figma UI/UX與Vue.js前端培訓計畫 2023/10~2024/2</div>
                 </div>
             </div>
             <div class="container">
@@ -113,11 +110,20 @@
                     <div class="item">Alibaba: 跨境電子商務規劃師證書</div>
                 </div>
             </div>
+            <div class="container">
+                <h2>專業培訓</h2>
+                <hr>
+                <div class="content">
+                    <div class="item">逢甲大學 & 勞動部發展署</div>
+                    <div class="item">Figma UI/UX與Vue.js前端培訓計畫 2023/10~2024/2</div>
+                </div>
+            </div>
         </section>
-        <section id="portfolio">
-            <h1>作品集</h1>
-            <hr>
+        <section id="contact-portfolio"></section>
+        <section class="portfolio">
+            <h1 class="title">作品集</h1>
             <h2>前端工程</h2>
+            <hr>
             <section class="fontend">
                 <div class="img">
                     <h2>專題實作-龍格畫室</h2>
@@ -144,6 +150,7 @@
                 </div>
             </section>
             <h2>Figma</h2>
+            <hr>
             <section class="figma">
                 <div class="img">
                     <h2>Google art 網頁介面試排</h2>
@@ -154,6 +161,7 @@
                 </div>
             </section>
             <h2>Photoshop</h2>
+            <hr>
             <section class="ps">
                 <!-- 使用lightbox2 播放 -->
                 <div class="img"></div>
@@ -164,7 +172,7 @@
         <h1>聯絡資訊</h1>
         <div class="item">
             <p><i class="fa-solid fa-phone"></i></p>
-            <p>0908957500</p>
+            <p><a href="tel:+886-908957500">0908957500</a></p>
         </div>
         <div class="item">
             <p><i class="fa-solid fa-envelope"></i></p>

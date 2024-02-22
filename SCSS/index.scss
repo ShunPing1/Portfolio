@@ -1,29 +1,68 @@
+// 設定變數
+$titleColor: #4a3026;
+$background: #f1e1cb;
+
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+//共用樣式 
+h1,
+h2 {
+    color: $titleColor;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+hr {
+    width: 100%;
+    // height: 20px;
+    border: $titleColor 1px solid;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#about-me,
+.portfolio {
+    border: 10px double $titleColor;
+    border-radius: 25px;
+    padding: 30px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: -20px;
+    background-color: $background;
+    padding: 0 10px;
+}
+
+@media (min-width: 1024px) {
+    .title {
+        left: 30px;
+    }
+}
+
+
 body {
+    background-color: $background;
 
-    h1,
-    h2 {
-        color: #4a3026;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    hr {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
+    // 
     nav {
         width: 100%;
         height: 60px;
         background-color: #d4ccc1;
+        box-shadow: 0 0 10px #575450;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -78,17 +117,6 @@ body {
             top: 100%;
             right: -50%;
             transition: 1s;
-
-            li {
-                cursor: pointer;
-
-                a {
-                    text-decoration: none;
-                    color: #000;
-
-                }
-
-            }
         }
 
         // 漢堡條選取動畫
@@ -111,23 +139,41 @@ body {
         }
     }
 
+    // nav RWD
+    @media (min-width: 1024px) {
+        nav {
+            .ham-menu {
+                display: none;
+            }
+
+            .nav-btn {
+                width: auto;
+                position: unset;
+                padding: 0;
+                flex-direction: row;
+                background-color: transparent;
+            }
+
+        }
+    }
+
     main {
         // nav高度
-        padding-top: 60px;
+        padding-top: 80px;
         max-width: 80%;
-        margin: auto;
+        margin: 0 auto 50px;
 
-        .about-me {
+        #about-me {
             // background-color: #faa;
             text-align: center;
             display: flex;
             flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
             gap: 20px;
-            padding: 20px 0;
 
             .container {
-
+                
                 .avator {
                     width: 180px;
                     height: 180px;
@@ -198,12 +244,43 @@ body {
             }
         }
 
-        #portfolio {
-            
+        // about-me RWD
+        @media (min-width: 1024px) {
+            #about-me {
+                flex-direction: row;
+
+                .about-top {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .name-area{
+                        width: 50%;
+                    }
+                    .container{
+                        width: 50%;
+                    }
+                    .container.about-right{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+
+                .container {
+                    width: 50%;
+                }
+            }
+        }
+
+        .portfolio {
+            // nav 超連結預留空間
+            margin-top: 80px;
+
             h1 {
                 text-align: center;
                 font-size: 24px;
             }
+
             section {
                 margin-bottom: 20px;
                 display: flex;
@@ -215,10 +292,14 @@ body {
                 .img {
                     width: 100%;
                     height: 200px;
-                    margin-bottom: 20px;
                     background-color: #ccc;
                     position: relative;
-                    h2{
+
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    h2 {
                         width: 100%;
                         color: #fff;
                         text-align: center;
