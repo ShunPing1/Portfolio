@@ -26,6 +26,9 @@ hr {
     border: $titleColor 1px solid;
     margin-bottom: 5px;
 }
+@media (min-width:768px) {
+    
+}
 
 a {
     text-decoration: none;
@@ -47,7 +50,7 @@ a {
     padding: 0 10px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .title {
         left: 30px;
     }
@@ -140,7 +143,7 @@ body {
     }
 
     // nav RWD
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         nav {
             .ham-menu {
                 display: none;
@@ -162,6 +165,9 @@ body {
         padding-top: 80px;
         max-width: 80%;
         margin: 0 auto 50px;
+        @media (min-width: 1024px) {
+            max-width: 70%;
+        }
 
         #about-me {
             // background-color: #faa;
@@ -202,39 +208,42 @@ body {
                         width: 40px;
                         height: 40px;
                         line-height: 40px;
-                        background-color: #aaf;
-                        border-radius: 50px;
+                        // border-radius: 50px;
+                        background-image: url('../img/Vue.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        // background-position: center;
                         position: relative;
                         z-index: 1;
                         transition: 1s;
 
-                        &::after {
-                            content: '111';
-                            font-size: 18px;
-                            position: absolute;
-                            visibility: hidden;
-                            top: 0%;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            transition: 0s 0.1s;
+                        // &::after {
+                        //     content: '111';
+                        //     font-size: 18px;
+                        //     position: absolute;
+                        //     visibility: hidden;
+                        //     top: 0%;
+                        //     left: 50%;
+                        //     transform: translateX(-50%);
+                        //     transition: 0s 0.1s;
 
 
-                        }
+                        // }
 
-                        &:hover {
-                            background-color: #fff;
-                            transform: rotateY(-180deg);
+                        // &:hover {
+                        //     background-color: #fff;
+                        //     transform: rotateY(-180deg);
 
-                            .fa-brands {
-                                visibility: hidden;
-                                transition: 0.1s;
-                            }
+                        //     .fa-brands {
+                        //         visibility: hidden;
+                        //         transition: 0.1s;
+                        //     }
 
-                            &::after {
-                                visibility: visible;
-                                transform: translateX(-50%) rotateY(-180deg);
-                            }
-                        }
+                        //     &::after {
+                        //         visibility: visible;
+                        //         transform: translateX(-50%) rotateY(-180deg);
+                        //     }
+                        // }
                     }
                 }
 
@@ -245,9 +254,11 @@ body {
         }
 
         // about-me RWD
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
             #about-me {
+                text-align: start;
                 flex-direction: row;
+                gap: 0;
 
                 .about-top {
                     width: 100%;
@@ -255,6 +266,7 @@ body {
                     flex-wrap: wrap;
                     .name-area{
                         width: 50%;
+                        text-align: center;
                     }
                     .container{
                         width: 50%;
@@ -268,6 +280,16 @@ body {
 
                 .container {
                     width: 50%;
+                    padding-bottom: 20px;
+                }
+                .edu{
+                    .content{
+                        line-height: 1.67;
+                    }
+                }
+
+                .training{
+                    width: 100%;
                 }
             }
         }
@@ -314,6 +336,18 @@ body {
             }
 
         }
+        // portfolio RWD
+        @media (min-width: 768px) {
+            .portfolio{
+                section{
+                    gap: 10px;
+                    .img{
+                        width: calc((100% - 20px) / 3);
+                        height: 300px;
+                    }
+                }
+            }
+        }
 
     }
 
@@ -326,24 +360,39 @@ body {
             font-size: 20px;
             margin-bottom: 5px;
         }
-
-        hr {
-            color: #000;
+        .contact-me{
+            margin: auto;
+            .item {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                span{
+                    display: none;
+                }
+                @media (min-width: 768px) {
+                    span{
+                        display: inline;
+                    }
+                }
+                p:first-child {
+                    width: 20%;
+                }
+    
+                p:last-child {
+                    flex: 1;
+                }
+            }
         }
 
-        .item {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
 
-            p:first-child {
-                width: 10%;
-            }
-
-            p:nth-child(2) {
-                flex: 1;
-            }
-        }
 
     }
+    // footer RWD
+    @media (min-width: 768px) {
+        .contact-me{
+            max-width: 70%;
+            margin: auto;
+        }
+    }
+
 }
