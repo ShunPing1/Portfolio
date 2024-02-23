@@ -199,9 +199,9 @@ body {
 
                 .skill {
                     display: flex;
-                    justify-content: center;
+                    justify-content: start;
                     flex-wrap: wrap;
-                    gap: 5px;
+                    gap: 10px;
                     font-size: 24px;
 
                     .skill-btn {
@@ -209,7 +209,7 @@ body {
                         height: 40px;
                         line-height: 40px;
                         // border-radius: 50px;
-                        background-image: url('../img/Vue.png');
+                        // background-image: url('../img/Ai.png');
                         background-repeat: no-repeat;
                         background-size: contain;
                         // background-position: center;
@@ -217,33 +217,33 @@ body {
                         z-index: 1;
                         transition: 1s;
 
-                        // &::after {
-                        //     content: '111';
-                        //     font-size: 18px;
-                        //     position: absolute;
-                        //     visibility: hidden;
-                        //     top: 0%;
-                        //     left: 50%;
-                        //     transform: translateX(-50%);
-                        //     transition: 0s 0.1s;
+                        &::after {
+                            content: attr(data-skill);
+                            font-size: 18px;
+                            position: absolute;
+                            visibility: hidden;
+                            top: 0%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: 0s 0.1s;
 
 
-                        // }
+                        }
 
-                        // &:hover {
-                        //     background-color: #fff;
-                        //     transform: rotateY(-180deg);
+                        &:hover {
+                            transform: rotateY(-180deg);
+                            background-image: unset !important;
 
-                        //     .fa-brands {
-                        //         visibility: hidden;
-                        //         transition: 0.1s;
-                        //     }
+                            .fa-brands {
+                                visibility: hidden;
+                                transition: 0.1s;
+                            }
 
-                        //     &::after {
-                        //         visibility: visible;
-                        //         transform: translateX(-50%) rotateY(-180deg);
-                        //     }
-                        // }
+                            &::after {
+                                visibility: visible;
+                                transform: translateX(-50%) rotateY(-180deg);
+                            }
+                        }
                     }
                 }
 
@@ -270,6 +270,13 @@ body {
                     }
                     .container{
                         width: 50%;
+                        .skill{
+                            gap: 20px;
+                            .skill-btn{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
                     }
                     .container.about-right{
                         display: flex;
@@ -281,11 +288,6 @@ body {
                 .container {
                     width: 50%;
                     padding-bottom: 20px;
-                }
-                .edu{
-                    .content{
-                        line-height: 1.67;
-                    }
                 }
 
                 .training{

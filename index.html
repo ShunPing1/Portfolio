@@ -65,18 +65,8 @@
                         <h2>技能</h2>
                         <hr>
                         <div class="content skill">
-                            <div class="skill-btn">
-                            </div>
-                            <div class="skill-btn">
-                            </div>
-                            <div class="skill-btn">
-                            </div>
-                            <div class="skill-btn">
-                            </div>
-                            <div class="skill-btn">
-                            </div>
-                            <div class="skill-btn">
-                            </div>
+                            <!-- <div class="skill-btn">
+                            </div> -->
                         </div>
                     </div>
 
@@ -87,10 +77,14 @@
                 <h2>學歷</h2>
                 <hr>
                 <div class="content">
-                    <div class="item">嶺東科技大學</div>
-                    <div class="item">資訊科技系碩士學位 2021/9~2023/7</div>
-                    <div class="item">嶺東科技大學</div>
-                    <div class="item">資訊科技系學士學位 2018/9~2021/6</div>
+                    <div class="item">
+                        <div>嶺東科技大學</div>
+                        <div>資訊科技系碩士學位(2023/7)</div>
+                    </div>
+                    <div class="item">
+                        <div>嶺東科技大學</div>
+                        <div>資訊科技系學士學位(2021/6)</div>
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -143,6 +137,13 @@
                     <h2>Bootstrap應用</h2>
                 </div>
             </section>
+            <h2>GitHub</h2>
+            <hr>
+            <section class="github">
+                <div class="img">
+                    <h2>點此進入GitHub</h2>
+                </div>
+            </section>
             <h2>Figma</h2>
             <hr>
             <section class="figma">
@@ -164,23 +165,62 @@
     <!-- 聯絡資訊 -->
     <footer id="footer">
         <section class="contact-me">
-        <h1>聯絡資訊</h1>
-        <div class="item">
-            <p><span>電話&ensp;</span><i class="fa-solid fa-phone"></i></p>
-            <p><a href="tel:+886-908957500">0908957500</a></p>
-        </div>
-        <div class="item">
-            <p><span>信箱&ensp;</span><i class="fa-solid fa-envelope"></i></p>
-            <p>aassx1004@gmail.com</p>
-        </div>
-        <div class="item">
-            <p><span>地址&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
-            <p>台中市烏日區榮泉里三榮十六路一巷162弄23號</p>
-        </div>
+            <h1>聯絡資訊</h1>
+            <div class="item">
+                <p><span>電話&ensp;</span><i class="fa-solid fa-phone"></i></p>
+                <p><a href="tel:+886-908957500">0908957500</a></p>
+            </div>
+            <div class="item">
+                <p><span>信箱&ensp;</span><i class="fa-solid fa-envelope"></i></p>
+                <p>aassx1004@gmail.com</p>
+            </div>
+            <div class="item">
+                <p><span>地址&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
+                <p>台中市烏日區榮泉里三榮十六路一巷162弄23號</p>
+            </div>
         </section>
 
     </footer>
-    <!-- <a href="./HTML & CSS/Microsoft website/RWD-vision/microsoft-homepage.html" target="_blank">微軟連結</a> -->
+    <script>
+        // 宣告變數
+        const skillContent = document.querySelector('.skill');
+        // 宣告圖片路徑陣列
+        let imgPathArr = [
+            '../img/html.webp',
+            '../img/CSS.png',
+            '../img/JS.webp',
+            '../img/Vue.png',
+            '../img/Bootstrap.png',
+            '../img/tailwind.svg',
+            '../img/Figma.png',
+            '../img/Ps.png',
+            '../img/Ai.png',
+        ];
+        // 宣告藏入data-skill值
+        let skillArr = [
+            'HTML',
+            'CSS',
+            'Javascript',
+            'Vue.js',
+            'Bootstrap',
+            'Tailwind',
+            'Figma',
+            'Photoshop',
+            'illustrator',
+        ];
+        // for迴圈添加.skill-btn至.skill中
+        for (let i = 0; i < imgPathArr.length; i++) {
+            skillContent.innerHTML += `<div class="skill-btn" data-skill="${skillArr[i]}"</div>`
+        };
+        const skillBtns = document.querySelectorAll('.skill-btn');
+        console.log(skillBtns);
+        skillBtns.forEach((skillBtn, index) => {
+            skillBtn.style.backgroundImage = `url(${imgPathArr[index]})`;
+        });
+
+
+
+    </script>
 </body>
 
 </html>
