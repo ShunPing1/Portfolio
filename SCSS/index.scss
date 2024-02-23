@@ -309,14 +309,10 @@ body {
                 margin-bottom: 20px;
                 display: flex;
                 flex-wrap: wrap;
-
-
-
-
                 .img {
                     width: 100%;
                     height: 200px;
-                    background-color: #ccc;
+                    background-color: #fff;
                     position: relative;
 
                     &:not(:last-child) {
@@ -330,11 +326,18 @@ body {
                         padding: 5px 0;
                         position: absolute;
                         bottom: 0;
-                        background-color: #000;
+                        background-color: rgba($color: #000000, $alpha: 0.7);
                     }
                 }
+            }
 
-
+            .github{
+                .img{
+                    background-image: url('/img/github.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
             }
 
         }
