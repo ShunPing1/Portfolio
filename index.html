@@ -113,54 +113,72 @@
             <h2>前端工程</h2>
             <hr>
             <section class="fontend">
-                <div class="img">
-                    <h2>專題實作-龍格畫室</h2>
-                </div>
 
-                <div class="img">
+                <a href="https://112-10-fcu-longer.dev-hub.io/" target="_blank">
+                    <div class="img">
+                        <h2>專題實作-龍格畫室</h2>
+                    </div>
+                </a>
+
+                
+                <a href="">
+                    <div class="img">
                     <h2>切版練習-微軟官網</h2>
                 </div>
 
-                <div class="img">
+                </a>
+                
+                <a href="">
+                    <div class="img">
                     <h2>API串接-天氣小卡</h2>
                 </div>
 
-                <div class="img">
+                </a>
+                
+                <a href="">
+                    <div class="img">
                     <h2>Vue實作</h2>
                 </div>
 
-                <div class="img">
+                </a>
+                
+                <a href="">
+                    <div class="img">
                     <h2>CSS動畫實作</h2>
                 </div>
 
-                <div class="img">
-                    <h2>Bootstrap應用</h2>
-                </div>
+                </a>
+                
+                <a href="">
+                    <div class="img">
+                        <h2>Bootstrap應用</h2>
+                    </div>
+                </a>
             </section>
             <h2>GitHub</h2>
             <hr>
-            <a href="https://github.com/ShunPing1/Portfolio" style="color: #fff;">
-                <section class="github">
+            <section class="github">
+                <a href="https://github.com/ShunPing1/Portfolio" style="color: #fff;">
                     <div class="img">
                         <h2>點此進入GitHub</h2>
                     </div>
-                </section>
-            </a>
+                </a>
+            </section>
             <h2>Figma</h2>
             <hr>
             <section class="figma">
-                <div class="img">
+                <!-- <div class="img">
                     <h2>Google art 網頁介面試排</h2>
-                </div>
+                </div> -->
 
-                <div class="img">
+                <!-- <div class="img">
                     <h2>APP介面開發</h2>
-                </div>
+                </div> -->
             </section>
             <h2>Photoshop</h2>
             <hr>
             <section class="ps">
-                <!-- 使用lightbox2 播放 -->
+                使用lightbox2 播放
                 <div class="img"></div>
             </section>
     </main>
@@ -190,6 +208,9 @@
     <script>
         // 宣告變數
         const skillContent = document.querySelector('.skill');
+        const portfolio = document.querySelector('.portfolio');
+        console.log(portfolio);
+        // --技能區圖片--
         // 宣告圖片路徑陣列
         let imgPathArr = [
             'img/html.webp',
@@ -223,6 +244,46 @@
         skillBtns.forEach((skillBtn, index) => {
             skillBtn.style.backgroundImage = `url(${imgPathArr[index]})`;
         });
+        // --作品集區--
+        // 宣告連結網址陣列
+        let fontEndLinkArr = [
+            'https://112-10-fcu-longer.dev-hub.io/',
+            ''
+        ]
+
+
+
+
+
+        // test
+        let portfoArr = [
+            'fontend',
+            'github',
+            'figma',
+            'Ps'
+        ];
+        let itemArr = [
+            1,
+            2,
+            3,
+            4,
+            5,
+        ];
+        let item02Arr = [
+            '一',
+            '二',
+            '三',
+        ];
+        for (let i = 0; i < portfoArr.length; i++) {
+            // console.log(portfoArr[i]);
+            if (portfoArr[i] == 'fontend') {
+                for (let j = 0; j < itemArr.length; j++) {
+                    // console.log(itemArr[j]);
+                    
+                }
+            }
+
+        }
 
 
 

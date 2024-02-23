@@ -30,7 +30,7 @@ hr {
     
 }
 
-a {
+a{
     text-decoration: none;
     color: #000;
 }
@@ -307,28 +307,32 @@ body {
 
             section {
                 margin-bottom: 20px;
+                width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                .img {
-                    width: 100%;
-                    height: 200px;
-                    background-color: #fff;
-                    position: relative;
-
-                    &:not(:last-child) {
-                        margin-bottom: 20px;
-                    }
-
-                    h2 {
+                a{
+                    .img {
                         width: 100%;
-                        color: #fff;
-                        text-align: center;
-                        padding: 5px 0;
-                        position: absolute;
-                        bottom: 0;
-                        background-color: rgba($color: #000000, $alpha: 0.7);
+                        height: 200px;
+                        background-color: #fff;
+                        position: relative;
+    
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+    
+                        h2 {
+                            width: 100%;
+                            color: #fff;
+                            text-align: center;
+                            padding: 5px 0;
+                            position: absolute;
+                            bottom: 0;
+                            background-color: rgba($color: #000000, $alpha: 0.7);
+                        }
                     }
                 }
+
             }
 
             .github{
@@ -346,9 +350,12 @@ body {
             .portfolio{
                 section{
                     gap: 10px;
-                    .img{
+                    a{
+
                         width: calc((100% - 20px) / 3);
-                        height: 300px;
+                        .img{
+                            height: 300px;
+                        }
                     }
                 }
             }
