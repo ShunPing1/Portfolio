@@ -64,12 +64,6 @@
                     <div class="skill-wrap">
                         <h2>技能</h2>
                         <hr>
-                        <!-- test -->
-                        <!-- <div class="test-item">fontend</div>
-                        <div class="test-item">interface</div>
-                        <div class="test-item">image</div>
-                        <div class="test-item">office</div> -->
-
                         <div class="content skill">
                         </div>
                     </div>
@@ -191,7 +185,7 @@
     <a href="Bootstrap/microsoft-website/microsoft-homepage-v3.html">微軟網站</a>
     <div class="test" style="font-size: 50px;">Img Test</div> -->
     <!-- 聯絡資訊 -->
-    <div class="boxtest"></div>
+    <div class="boxtest">111</div>
     <footer id="footer">
         <section class="contact-me">
             <h1>聯絡資訊</h1>
@@ -225,11 +219,11 @@
         const portfolio = document.querySelector('.portfolio');
         console.log(portfolio);
         // --技能區圖片--
-        // 宣告圖片路徑陣列
+        // 宣告skillArr陣列，以物件形式儲存陣列資料
         let skillArr = [
             {
                 name: '前端工程',
-                imgPath: [
+                imgPaths: [
                     'img/html.webp',
                     'img/CSS.png',
                     'img/JS.webp',
@@ -237,7 +231,7 @@
                     'img/Bootstrap.png',
                     'img/tailwind.svg',
                 ],
-                dataSet: [
+                dataSets: [
                     'HTML',
                     'CSS',
                     'Javascript',
@@ -248,30 +242,30 @@
             },
             {
                 name: '介面設計',
-                imgPath: [
+                imgPaths: [
                     'img/Figma.png',
                 ],
-                dataSet: [
+                dataSets: [
                     'Figma',
                 ]
             },
             {
                 name: '影像處理',
-                imgPath: [
+                imgPaths: [
                     'img/Ps.png',
                     'img/Ai.png',
                 ],
-                dataSet: [
+                dataSets: [
                     'Photoshop',
                     'illustrator',
                 ]
             },
             {
                 name: '文書編輯',
-                imgPath: [
+                imgPaths: [
                     '',
                 ],
-                dataSet: [
+                dataSets: [
                     'Word',
                     'PowerPoint',
                     'Excel',
@@ -279,64 +273,29 @@
             },
             {
                 name: '統計分析',
-                imgPath: [
+                imgPaths: [
                     '',
                 ],
-                dataSet: [
+                dataSets: [
                     'SPSS',
                 ]
             },
         ];
-        // let fontEndArr = [
-        //     'img/html.webp',
-        //     'img/CSS.png',
-        //     'img/JS.webp',
-        //     'img/Vue.png',
-        //     'img/Bootstrap.png',
-        //     'img/tailwind.svg',
-        //     'img/Figma.png',
-
-        // ];
-        // let imgProcessArr = [
-        //     'img/Ps.png',
-        //     'img/Ai.png',
-        // ]
-        // 宣告藏入data-skill值
-        // let skillArr = [
-        //     'HTML',
-        //     'CSS',
-        //     'Javascript',
-        //     'Vue.js',
-        //     'Bootstrap',
-        //     'Tailwind',
-        //     'Figma',
-        //     'Photoshop',
-        //     'illustrator',
-        // ];
-        for (let i = 0; i < skillArr.length; i++) {
-            // console.log(skillArr[i].name);   
+        skillArr.forEach((skill) => {
+            let imgPathContent = '';
+            let dataSetContent = '';
+            skill.dataSets.forEach((dataSet,index) => {
+                dataSetContent += `<div class="skill-btn" data-skill="${dataSet}"  style="background-image: url(${skill.imgPaths[index]});"></div>`;
+            });
             skillContent.innerHTML += `
-            <p>${skillArr[i].name}</p>
-            <div data-skill = ${dataContent()}></div>
+                <div class="">
+                    <p>${skill.name}</p>
+                    ${dataSetContent}
+                </div>
+            <br>
             `;
-            console.log(skillArr[i].dataSet);
-            function dataContent() {
-                skillArr[i].dataSet.forEach((data, index) => {
-                    return data;
-                })
-            }
+        })
 
-        }
-
-        // // for迴圈添加.skill-btn至.skill中
-        // for (let i = 0; i < imgPathArr.length; i++) {
-        //     skillContent.innerHTML += `<div class="skill-btn" data-skill="${skillArr[i]}"</div>`
-        // };
-        // const skillBtns = document.querySelectorAll('.skill-btn');
-        // console.log(skillBtns);
-        // skillBtns.forEach((skillBtn, index) => {
-        //     skillBtn.style.backgroundImage = `url(${imgPathArr[index]})`;
-        // });
         // --作品集區--
         // 宣告連結網址陣列
         let fontEndLinkArr = [
@@ -349,51 +308,7 @@
 
 
         // test
-        const boxtest = document.querySelector('.boxtest');
-        console.log(boxtest);
-        let portfoArr = [
-            {
-                name: 'github',
-                number: [
-                    1,
-                ],
-                item: [
-                    '一',
-                ]
-            },
-            {
-                name: 'fontend',
-                number: [
-                    1,
-                    2,
-                ],
-                item: [
-                    '一',
-                    '二',
-                ]
-            },
-            {
-                name: 'figma',
-                number: [
-                    1,
-                    2,
-                    3,
-                ],
-                item: [
-                    '一',
-                    '二',
-                    '三',
-                ]
-            },
 
-        ];
-        portfoArr.forEach((port,index) => {
-            console.log(port.name);
-            boxtest.innerHTML += `
-            <p>${port.name}</p>
-            <div data-number = "${port.number}">${port.number}</div>
-            `; 
-        })
 
 
 
