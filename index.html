@@ -64,9 +64,13 @@
                     <div class="skill-wrap">
                         <h2>技能</h2>
                         <hr>
+                        <!-- test -->
+                        <!-- <div class="test-item">fontend</div>
+                        <div class="test-item">interface</div>
+                        <div class="test-item">image</div>
+                        <div class="test-item">office</div> -->
+
                         <div class="content skill">
-                            <!-- <div class="skill-btn">
-                            </div> -->
                         </div>
                     </div>
 
@@ -120,35 +124,35 @@
                     </div>
                 </a>
 
-                
+
                 <a href="">
                     <div class="img">
-                    <h2>切版練習-微軟官網</h2>
-                </div>
+                        <h2>切版練習-微軟官網</h2>
+                    </div>
 
                 </a>
-                
+
                 <a href="">
                     <div class="img">
-                    <h2>API串接-天氣小卡</h2>
-                </div>
+                        <h2>API串接-天氣小卡</h2>
+                    </div>
 
                 </a>
-                
+
                 <a href="">
                     <div class="img">
-                    <h2>Vue實作</h2>
-                </div>
+                        <h2>Vue實作</h2>
+                    </div>
 
                 </a>
-                
+
                 <a href="">
                     <div class="img">
-                    <h2>CSS動畫實作</h2>
-                </div>
+                        <h2>CSS動畫實作</h2>
+                    </div>
 
                 </a>
-                
+
                 <a href="">
                     <div class="img">
                         <h2>Bootstrap應用</h2>
@@ -182,33 +186,35 @@
                 <div class="img"></div>
             </section>
     </main>
-    <img src="./img/html.webp" alt="">
+    <!-- <img src="./img/html.webp" alt="">
     <img src="img/JS.webp" alt="">
     <a href="Bootstrap/microsoft-website/microsoft-homepage-v3.html">微軟網站</a>
-    <div class="test" style="font-size: 50px;">Img Test</div>
+    <div class="test" style="font-size: 50px;">Img Test</div> -->
     <!-- 聯絡資訊 -->
+    <div class="boxtest"></div>
     <footer id="footer">
         <section class="contact-me">
             <h1>聯絡資訊</h1>
+            <hr>
             <div class="item">
-                <p><span>電話&ensp;</span><i class="fa-solid fa-phone"></i></p>
+                <p class="contact-icon"><span>電話&ensp;</span><i class="fa-solid fa-phone"></i></p>
                 <p><a href="tel:+886-908957500">0908957500</a></p>
             </div>
             <div class="item">
-                <p><span>信箱&ensp;</span><i class="fa-solid fa-envelope"></i></p>
+                <p class="contact-icon"><span>信箱&ensp;</span><i class="fa-solid fa-envelope"></i></p>
                 <p>aassx1004@gmail.com</p>
             </div>
             <div class="item">
-                <p><span>地址&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
+                <p class="contact-icon"><span>地址&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
                 <p>台中市烏日區榮泉里三榮十六路一巷162弄23號</p>
             </div>
             <div class="item">
-                <p><span>LNE ID&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
+                <p class="contact-icon"><span>LNE ID&ensp;</span><i class="fa-brands fa-line"></i></p>
                 <p>sj486131</p>
             </div>
             <div class="item">
-                <p><span>FaceBook&ensp;</span><i class="fa-solid fa-location-dot"></i></p>
-                <p>楊順評</p>
+                <p class="contact-icon"><span>FaceBook&ensp;</span><i class="fa-brands fa-facebook"></i></p>
+                <p><a href="https://www.facebook.com/profile.php?id=100003474416429&locale=zh_TW">楊順評</a></p>
             </div>
         </section>
 
@@ -220,38 +226,117 @@
         console.log(portfolio);
         // --技能區圖片--
         // 宣告圖片路徑陣列
-        let imgPathArr = [
-            'img/html.webp',
-            'img/CSS.png',
-            'img/JS.webp',
-            'img/Vue.png',
-            'img/Bootstrap.png',
-            'img/tailwind.svg',
-            'img/Figma.png',
-            'img/Ps.png',
-            'img/Ai.png',
-        ];
-        // 宣告藏入data-skill值
         let skillArr = [
-            'HTML',
-            'CSS',
-            'Javascript',
-            'Vue.js',
-            'Bootstrap',
-            'Tailwind',
-            'Figma',
-            'Photoshop',
-            'illustrator',
+            {
+                name: '前端工程',
+                imgPath: [
+                    'img/html.webp',
+                    'img/CSS.png',
+                    'img/JS.webp',
+                    'img/Vue.png',
+                    'img/Bootstrap.png',
+                    'img/tailwind.svg',
+                ],
+                dataSet: [
+                    'HTML',
+                    'CSS',
+                    'Javascript',
+                    'Vue.js',
+                    'Bootstrap',
+                    'Tailwind',
+                ]
+            },
+            {
+                name: '介面設計',
+                imgPath: [
+                    'img/Figma.png',
+                ],
+                dataSet: [
+                    'Figma',
+                ]
+            },
+            {
+                name: '影像處理',
+                imgPath: [
+                    'img/Ps.png',
+                    'img/Ai.png',
+                ],
+                dataSet: [
+                    'Photoshop',
+                    'illustrator',
+                ]
+            },
+            {
+                name: '文書編輯',
+                imgPath: [
+                    '',
+                ],
+                dataSet: [
+                    'Word',
+                    'PowerPoint',
+                    'Excel',
+                ]
+            },
+            {
+                name: '統計分析',
+                imgPath: [
+                    '',
+                ],
+                dataSet: [
+                    'SPSS',
+                ]
+            },
         ];
-        // for迴圈添加.skill-btn至.skill中
-        for (let i = 0; i < imgPathArr.length; i++) {
-            skillContent.innerHTML += `<div class="skill-btn" data-skill="${skillArr[i]}"</div>`
-        };
-        const skillBtns = document.querySelectorAll('.skill-btn');
-        console.log(skillBtns);
-        skillBtns.forEach((skillBtn, index) => {
-            skillBtn.style.backgroundImage = `url(${imgPathArr[index]})`;
-        });
+        // let fontEndArr = [
+        //     'img/html.webp',
+        //     'img/CSS.png',
+        //     'img/JS.webp',
+        //     'img/Vue.png',
+        //     'img/Bootstrap.png',
+        //     'img/tailwind.svg',
+        //     'img/Figma.png',
+
+        // ];
+        // let imgProcessArr = [
+        //     'img/Ps.png',
+        //     'img/Ai.png',
+        // ]
+        // 宣告藏入data-skill值
+        // let skillArr = [
+        //     'HTML',
+        //     'CSS',
+        //     'Javascript',
+        //     'Vue.js',
+        //     'Bootstrap',
+        //     'Tailwind',
+        //     'Figma',
+        //     'Photoshop',
+        //     'illustrator',
+        // ];
+        for (let i = 0; i < skillArr.length; i++) {
+            // console.log(skillArr[i].name);   
+            skillContent.innerHTML += `
+            <p>${skillArr[i].name}</p>
+            <div data-skill = ${dataContent()}></div>
+            `;
+            console.log(skillArr[i].dataSet);
+            function dataContent() {
+                skillArr[i].dataSet.forEach((data, index) => {
+                    return data;
+                })
+            }
+
+        }
+
+        // // for迴圈添加.skill-btn至.skill中
+        // for (let i = 0; i < imgPathArr.length; i++) {
+        //     skillContent.innerHTML += `<div class="skill-btn" data-skill="${skillArr[i]}"</div>`
+        // };
+        // const skillBtns = document.querySelectorAll('.skill-btn');
+        // console.log(skillBtns);
+        // skillBtns.forEach((skillBtn, index) => {
+        //     skillBtn.style.backgroundImage = `url(${imgPathArr[index]})`;
+        // });
         // --作品集區--
         // 宣告連結網址陣列
         let fontEndLinkArr = [
@@ -260,38 +345,57 @@
         ]
 
 
-
+        // 點擊複製功能
 
 
         // test
+        const boxtest = document.querySelector('.boxtest');
+        console.log(boxtest);
         let portfoArr = [
-            'fontend',
-            'github',
-            'figma',
-            'Ps'
-        ];
-        let itemArr = [
-            1,
-            2,
-            3,
-            4,
-            5,
-        ];
-        let item02Arr = [
-            '一',
-            '二',
-            '三',
-        ];
-        for (let i = 0; i < portfoArr.length; i++) {
-            // console.log(portfoArr[i]);
-            if (portfoArr[i] == 'fontend') {
-                for (let j = 0; j < itemArr.length; j++) {
-                    // console.log(itemArr[j]);
-                    
-                }
-            }
+            {
+                name: 'github',
+                number: [
+                    1,
+                ],
+                item: [
+                    '一',
+                ]
+            },
+            {
+                name: 'fontend',
+                number: [
+                    1,
+                    2,
+                ],
+                item: [
+                    '一',
+                    '二',
+                ]
+            },
+            {
+                name: 'figma',
+                number: [
+                    1,
+                    2,
+                    3,
+                ],
+                item: [
+                    '一',
+                    '二',
+                    '三',
+                ]
+            },
 
-        }
+        ];
+        portfoArr.forEach((port,index) => {
+            console.log(port.name);
+            boxtest.innerHTML += `
+            <p>${port.name}</p>
+            <div data-number = "${port.number}">${port.number}</div>
+            `; 
+        })
+
+
 
 
 
