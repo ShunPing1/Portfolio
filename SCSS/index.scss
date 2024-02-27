@@ -26,11 +26,6 @@ h2 {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    h2 {
-        text-align: start;
-    }
-}
 
 hr {
     width: 100%;
@@ -40,11 +35,7 @@ hr {
     margin-bottom: 5px;
 }
 
-@media (min-width:768px) {
-    hr {
-        background: linear-gradient(to right, $titleColor, transparent);
-    }
-}
+
 
 a {
     text-decoration: none;
@@ -67,8 +58,14 @@ a {
     transform: translateX(-50%);
     padding: 0 10px;
 }
-
+// 共用樣式RWD
 @media (min-width: 768px) {
+    h2 {
+        text-align: start;
+    }
+    hr {
+        background: linear-gradient(to right, $titleColor, transparent);
+    }
     .title {
         left: 30px;
         transform: translateX(0);
@@ -417,9 +414,7 @@ html {
                         gap: 10px;
 
                         a {
-
                             width: calc((100% - 20px) / 3);
-
                             .img {
                                 height: 300px;
                             }
