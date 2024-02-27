@@ -213,7 +213,7 @@
         </section>
 
     </footer>
-    <script>
+    <script src="">
         // 宣告變數
         const skillContent = document.querySelector('.skill');
         const portfolio = document.querySelector('.portfolio');
@@ -284,14 +284,14 @@
         skillArr.forEach((skill) => {
             let imgPathContent = '';
             let dataSetContent = '';
-            skill.dataSets.forEach((dataSet,index) => {
+            skill.dataSets.forEach((dataSet, index) => {
                 dataSetContent += `<div class="skill-btn" data-skill="${dataSet}"  style="background-image: url(${skill.imgPaths[index]});"></div>`;
             });
             skillContent.innerHTML += `
-                <div class="">
-                    <p>${skill.name}</p>
+            <p>${skill.name}</p>
+            <div class="">
                     ${dataSetContent}
-                </div>
+            </div>
             <br>
             `;
         })
