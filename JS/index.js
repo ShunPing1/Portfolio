@@ -72,20 +72,18 @@ skillArr.forEach((skill) => {
         dataSetContent += `<div class="skill-btn" data-skill="${dataSet}"  style="background-image: url(${skill.imgPaths[index]});"></div>`;
     });
     skillContent.innerHTML += `
-    <p>${skill.name}</p>
-    <div class="">
-            ${dataSetContent}
+    <div>
+        <p>${skill.name}</p>
+        <hr>
+        <div class="skill-btns">
+                ${dataSetContent}
+        </div>
     </div>
-    <br>
     `;
 })
 
 // --作品集區--
-// 宣告連結網址陣列
-let fontEndLinkArr = [
-    'https://112-10-fcu-longer.dev-hub.io/',
-    ''
-]
+
 
 
 // 點擊複製功能
