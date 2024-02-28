@@ -303,7 +303,7 @@
         </div>
         <div class="count-down">
             <button class="stop-btn" type="button">Stop</button>
-            <div class="countdown-timer">59</div>
+            <div class="countdown-timer"></div>
         </div>
         <button class="prompt-btn" type="button">提示剩餘3次</button>
         <button class="reset-btn" type="button">重新開始</button>
@@ -552,9 +552,9 @@
         // console.log(addOpacity(level,0.2));
 
         //fn 倒數計時
-        startCountdown();
         let countDown = 59;
         let timer;
+        startCountdown();
         function startCountdown() {
             timer = setInterval(function () {
                 countDown--;
