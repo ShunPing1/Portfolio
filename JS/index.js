@@ -163,6 +163,65 @@ portfoArr.forEach((portfoItem) => {
     `;
 });
 
+// PS-lightbox內容
+const boxes = document.querySelector('.boxes');
+console.log(boxes);
+let swiperArr = [
+    {
+        name: 'img-1',
+        number: 1,
+        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg',
+        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg',
+    },
+    {
+        name: 'img-2',
+        number: 2,
+        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg',
+        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg',
+    },
+    {
+        name: 'img-3',
+        number: 3,
+        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg',
+        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg',
+    },
+    {
+        name: 'img-4',
+        number: 4,
+        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg',
+        path: 'img/Ai.png',
+    },
+];
+let dataSetArr = [
+    'example-1',
+    'example-2',
+];
+// 使用dataSet陣列進行forEach達到重複生成HTML內容
+dataSetArr.forEach((dataSet) => {
+    // console.log(dataSet);
+    swiperArr.forEach((item) => {
+        boxes.innerHTML +=`
+        <div class="box" style="background-image: url(${item.imgPath});">
+            <a class="example-image-link" href="${item.path}" data-lightbox="${dataSet}">
+                <div class="mask">${item.number}</div>
+            </a>
+        </div>
+        `;
+    });
+})
+
+const boxs = document.querySelectorAll('.box');
+console.log(boxs);
+
+// 輪播動畫暫停
+boxs.forEach((box) => {
+    box.addEventListener('mouseenter', () => {
+        boxes.style.animationPlayState = 'paused';
+    })
+    box.addEventListener('mouseout', () => {
+        boxes.style.animationPlayState = 'running';
+    })
+});
 
 // 點擊複製功能
 

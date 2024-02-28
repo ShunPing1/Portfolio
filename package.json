@@ -1,5 +1,17 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "dependencies": {
+    "lightbox2": "^2.11.4"
+  },
+  "name": "portfilio",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

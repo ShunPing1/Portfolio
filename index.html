@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.min.css">
+
 </head>
 
 <body>
@@ -118,10 +120,16 @@
             <h2>Photoshop</h2>
             <hr>
             <section class="ps">
-                使用lightbox2 播放
-                <div class="img"></div>
+                <!-- 使用lightbox2 播放 -->
+                <div class="container">
+                    <div class="boxes">
+                        <!-- JS產內容 -->
+                    </div>
+                </div>
             </section>
     </main>
+    <a href="img/Ai.png" data-lightbox="img">Ai</a>
+    <a href="img/Ai.png" data-lightbox="img">Ai</a>
     <!-- 聯絡資訊 -->
     <div class="boxtest">111</div>
     <footer id="footer">
@@ -153,7 +161,7 @@
 
     </footer>
     <script src="JS/index.js"></script>
-    <!-- <source src="/index.html"> -->
+    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 
 </html>

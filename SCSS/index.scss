@@ -405,6 +405,59 @@ html {
                     }
                 }
 
+                section.ps{
+                    display: block;
+                    .container {
+                        width: 100%;
+                        margin: auto;
+                        padding: 20px 0;
+                        overflow: hidden;
+
+                        .boxes {
+                            width: 200%;
+                            height: 120px;
+                            display: flex;
+                            position: relative;
+                            top: 0;
+                            animation: filmAni 10s infinite linear;
+
+                            .box {
+                                flex: 1;
+                                font-size: 24px;
+                                height: 100%;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                .mask {
+                                    width: 100%;
+                                    background-color: transparent;
+                                    color: transparent;
+                                    z-index: 3;
+                                    font-size: 60px;
+                                    text-align: center;
+                                    line-height: 120px;
+                                    transition: 1s;
+                                    
+                                    &:hover{
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            @keyframes filmAni {
+                0% {
+                    left: 0px;
+                }
+    
+                100% {
+                    left: -100%;
+    
+                }
             }
 
             // portfolio RWD
