@@ -90,19 +90,22 @@ const portfoArr = [
         name: '前端工程',
         items: [
             '專案實作-龍格畫室',
-            '切版練習-微軟官網',
+            '切版-微軟官網(RWD)',
+            'Bootstrap-RWD',
             'API串接-天氣小卡',
+            '色弱遊戲',
             'Vue實作',
-            'Bootstrap應用',
         ],
         paths: [
             'https://112-10-fcu-longer.dev-hub.io/',
-            'https://112-10-fcu-longer.dev-hub.io/',
-            'https://112-10-fcu-longer.dev-hub.io/',
-            'https://112-10-fcu-longer.dev-hub.io/',
+            'Bootstrap_practise/microsoft-website/microsoft-homepage-v3.html',
+            'Bootstrap_practise/RWD/bootstrap-HW.html',
+            'Bootstrap_practise/weather-card/weatherCard-bootstrap-HW.html',
+            'JS_practise/color-game/color-blind-HW.html',
             'https://112-10-fcu-longer.dev-hub.io/',
         ],
         imgPaths: [
+            '',
             '',
             '',
             '',
@@ -125,12 +128,12 @@ const portfoArr = [
     {
         name: 'Figma',
         items: [
-            '網頁介面試排',
+            'Google Art 網頁模擬',
             'APP介面開發',
         ],
         paths: [
-            'https://112-10-fcu-longer.dev-hub.io/',
-            'https://112-10-fcu-longer.dev-hub.io/',
+            'https://www.figma.com/proto/TSoqZSBdRAsDweOiz1JxvN/%E7%94%A2%E6%A5%AD%E6%96%B0%E5%B0%96%E5%85%B5?type=design&node-id=109-753&t=BexkAuJv5lKPbuDW-1&scaling=scale-down&page-id=0%3A1&mode=design',
+            'https://www.figma.com/proto/Cpw6KGxd4y9McQWWX45cJw/Untitled?type=design&node-id=54-257&t=47ncpxbpTed1rs7d-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A688&show-proto-sidebar=1',
         ],
         imgPaths: [
             '',

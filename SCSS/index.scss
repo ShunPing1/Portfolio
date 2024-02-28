@@ -248,11 +248,8 @@ html {
                                 width: 40px;
                                 height: 40px;
                                 line-height: 40px;
-                                // border-radius: 50px;
-                                // background-image: url('../img/Ai.png');
                                 background-repeat: no-repeat;
                                 background-size: contain;
-                                // background-position: center;
                                 position: relative;
                                 z-index: 1;
                                 transition: 1s;
@@ -410,16 +407,20 @@ html {
                     .container {
                         width: 100%;
                         margin: auto;
+                        background-color: #000;
+                        margin-top: 20px;
                         padding: 20px 0;
                         overflow: hidden;
+                        position: relative;
 
                         .boxes {
-                            width: 200%;
+                            width: 2000px;
                             height: 180px;
                             display: flex;
+                            gap: 10px;
                             position: relative;
                             top: 0;
-                            animation: filmAni 10s infinite linear;
+                            animation: filmAni 15s infinite linear;
 
                             .box {
                                 flex: 1;
@@ -458,7 +459,7 @@ html {
                 }
     
                 100% {
-                    left: -100%;
+                    left: -1000px;
     
                 }
             }
@@ -475,6 +476,25 @@ html {
                                 height: 300px;
                             }
                         }
+                    }
+                    section.ps{
+                        .container{
+
+                            .boxes{
+                                width: 200%;
+                                animation-duration: 10s;
+                            }
+                        }
+                    }
+                }
+                @keyframes filmAni {
+                    0% {
+                        left: 0px;
+                    }
+        
+                    100% {
+                        left: -100%;
+        
                     }
                 }
             }
