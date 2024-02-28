@@ -34,7 +34,7 @@ let skillArr = [
     {
         name: '影像處理',
         imgPaths: [
-            'img/Ps.png',
+            'img/PS.png',
             'img/Ai.png',
         ],
         dataSets: [
@@ -202,7 +202,7 @@ dataSetArr.forEach((dataSet) => {
     swiperArr.forEach((item) => {
         boxes.innerHTML +=`
         <div class="box" style="background-image: url(${item.imgPath});">
-            <a class="example-image-link" href="${item.path}" data-lightbox="${dataSet}">
+            <a class="example-image-link" href="${item.path}" data-lightbox="${dataSet}" target="_blank">
                 <div class="mask">${item.number}</div>
             </a>
         </div>
