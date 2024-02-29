@@ -13,6 +13,7 @@ $background: #f1e1cb;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 //共用樣式 
@@ -21,11 +22,25 @@ h2 {
     color: $titleColor;
 }
 
+h1{
+    font-size:24px;
+}
+
 h2 {
     font-size: 20px;
     text-align: center;
 }
 
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p,
+div{
+    font-size: 16px;
+    color: #1d0707;
+}
 
 hr {
     width: 100%;
@@ -60,13 +75,26 @@ a {
 }
 // 共用樣式RWD
 @media (min-width: 768px) {
+    h1{
+        font-size: 30px;
+    }
     h2 {
+        font-size: 26px;
         text-align: start;
+    }
+    h3{
+        font-size: 20px;
     }
     hr {
         background: linear-gradient(to right, $titleColor, transparent);
     }
+    p,
+    div{
+        font-size: 18px;
+        color: #1d0707;
+    }
     .title {
+        top: -24px;
         left: 30px;
         transform: translateX(0);
     }
@@ -100,7 +128,7 @@ html {
                 .line {
                     width: 65%;
                     height: 3px;
-                    background-color: #000;
+                    background-color: $titleColor;
                     position: absolute;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -127,17 +155,24 @@ html {
                 padding: 25px 0px;
                 background-color: #cdc5ba;
                 border-radius: 0 0 0 50px;
-                color: #000;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 5px;
+                gap: 15px;
                 position: absolute;
                 top: 100%;
                 right: -50%;
                 transition: 1s;
+
+                li{
+                    font-size: 18px;
+                    font-weight: bold;
+                    a{
+                        color: $titleColor;
+                    }
+                }
             }
 
             // 漢堡條選取動畫
@@ -173,6 +208,10 @@ html {
                     padding: 0;
                     flex-direction: row;
                     background-color: transparent;
+
+                    li{
+                        font-size: 24px;
+                    }
                 }
 
             }
@@ -204,7 +243,8 @@ html {
                         width: 180px;
                         height: 180px;
                         background-color: #aaa;
-                        border-radius: 50%;
+                        border: 5px solid $titleColor;
+                        border-radius: 20px;
                         margin: auto;
                     }
 
@@ -290,7 +330,6 @@ html {
             }
 
             // about-me RWD
-
             @media (min-width: 768px) {
                 #about-me {
                     text-align: start;
@@ -302,15 +341,21 @@ html {
                         display: flex;
                         flex-wrap: wrap;
 
-                        .name-area {
-                            width: 50%;
+                        .avator-area {
+                            width: 30%;
                             text-align: center;
                         }
 
                         .container.about-right {
+                            flex: 1;
                             display: flex;
                             flex-direction: column;
-                            justify-content: space-between;
+                            // justify-content: space-between;
+                            gap: 10px;
+
+                            .en-name{
+                                text-align: start;
+                            }
                         }
                     }
 
@@ -354,11 +399,6 @@ html {
                 // nav 超連結預留空間
                 margin-top: 80px;
 
-                h1 {
-                    text-align: center;
-                    font-size: 24px;
-                }
-
                 section {
                     margin-bottom: 20px;
                     width: 100%;
@@ -381,6 +421,7 @@ html {
 
                             h2 {
                                 width: 100%;
+                                font-size: 20px;
                                 text-align: center;
                                 color: #fff;
                                 padding: 5px 0;
@@ -471,7 +512,7 @@ html {
                         gap: 10px;
 
                         a {
-                            width: calc((100% - 20px) / 3);
+                            width: calc((100% - 20px) / 2);
                             .img {
                                 height: 300px;
                             }
@@ -498,6 +539,16 @@ html {
                     }
                 }
             }
+            @media (min-width: 1420px) {
+                .portfolio{
+                    section {
+                        a {
+                            width: calc((100% - 20px) / 3);
+                        }
+                    }
+
+                }
+            }
 
         }
 
@@ -507,7 +558,6 @@ html {
             padding: 20px;
 
             h1 {
-                font-size: 20px;
                 margin-bottom: 5px;
                 text-align: center;
             }
@@ -522,9 +572,11 @@ html {
                     display: flex;
                     flex-wrap: wrap;
                     margin-bottom: 10px;
+                    gap: 10px;
 
                     .contact-icon {
                         text-align: center;
+                        color: $titleColor;
                     }
 
                     span {
@@ -564,13 +616,28 @@ html {
                     }
 
                     .item {
+                        font-size: 18px;
                         .contact-icon {
+                            width: 20%;
                             text-align: start;
 
                             i {
                                 visibility: hidden;
                             }
                         }
+                        .copyContent{
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+        }
+        @media (min-width: 1300px) {
+            .contact-me{
+                .item{
+                    .contact-icon{
+                        width: 10%;
                     }
                 }
             }

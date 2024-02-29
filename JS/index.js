@@ -73,7 +73,7 @@ skillArr.forEach((skill) => {
     });
     skillContent.innerHTML += `
     <div>
-        <p>${skill.name}</p>
+        <h3>${skill.name}</h3>
         <hr>
         <div class="skill-btns">
                 ${dataSetContent}
@@ -83,7 +83,6 @@ skillArr.forEach((skill) => {
 });
 // --作品集區--
 const portfoContent = document.querySelector('.portfolio-content');
-console.log(portfoContent);
 // 宣告portfoArr陣列，以物件形式儲存陣列資料
 const portfoArr = [
     {
@@ -146,7 +145,6 @@ portfoArr.forEach((portfoItem) => {
     let itemsContent = '';
 
     portfoItem.items.forEach((item, index) => {
-        console.log(item);
         itemsContent += `
             <a href="${portfoItem.paths[index]}" target="_blank">
                 <div class="img">
@@ -168,7 +166,6 @@ portfoArr.forEach((portfoItem) => {
 
 // PS-lightbox內容
 const boxes = document.querySelector('.boxes');
-console.log(boxes);
 let swiperArr = [
     {
         name: 'img-1',
@@ -201,9 +198,8 @@ let dataSetArr = [
 ];
 // 使用dataSet陣列進行forEach達到重複生成HTML內容
 dataSetArr.forEach((dataSet) => {
-    // console.log(dataSet);
     swiperArr.forEach((item) => {
-        boxes.innerHTML +=`
+        boxes.innerHTML += `
         <div class="box" style="background-image: url(${item.imgPath});">
             <a class="example-image-link" href="${item.path}" data-lightbox="${dataSet}" target="_blank">
                 <div class="mask">${item.number}</div>
@@ -214,7 +210,6 @@ dataSetArr.forEach((dataSet) => {
 })
 
 const boxs = document.querySelectorAll('.box');
-console.log(boxs);
 
 // 輪播動畫暫停
 boxs.forEach((box) => {
@@ -227,6 +222,27 @@ boxs.forEach((box) => {
 });
 
 // 點擊複製功能
+const copyContents = document.querySelectorAll('.copyContent');
+console.log(copyContents);
+copyContents.forEach((copyContent) => {
+    console.log(copyContent.innerText);
+    copyContent.addEventListener('click', clickCopy)
+
+
+})
+// 避免每次foreach遍歷時，重複執行clipboar動作因此將function額外寫
+function clickCopy(event) {
+    const copyElement = event.target;
+    const text = copyElement.textContent;
+    navigator.clipboard.writeText(text)
+    .then(() => {
+    alert('複製成功!');
+    })
+    .catch((error) => {
+        alert('複製失敗', error);
+    });
+
+}
 
 
 // test
