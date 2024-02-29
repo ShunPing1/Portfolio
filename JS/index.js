@@ -247,6 +247,8 @@ function clickCopy(event) {
 // 漢堡條開關
 const hamBtn = document.querySelector('.ham-menu');
 const hamMask = document.querySelector('.menu-mask');
+const menuContent = document.querySelector('.nav-btn');
+const lines = document.querySelectorAll('.line');
 let hamState = false;
 hamBtn.addEventListener('click',()=>{
     hamState = !hamState;
@@ -254,22 +256,36 @@ hamBtn.addEventListener('click',()=>{
     if(hamState){
         hamMask.classList.add('mask-open');
         document.body.style.overflow = 'hidden';
+        menuContent.classList.add('menuOpen');
+        lines[0].classList.add('line-top');
+        lines[1].classList.add('line-middle');
+        lines[2].classList.add('line-bottom');
 
     }else{
         hamMask.classList.remove('mask-open');
         document.body.style.overflow = 'visible';
+        menuContent.classList.remove('menuOpen');
+        lines[0].classList.remove('line-top');
+        lines[1].classList.remove('line-middle');
+        lines[2].classList.remove('line-bottom');
     }
+
 })
-// 點擊連結關閉菜單
+// 點擊nav-link關閉菜單
 const navLinks = document.querySelectorAll('.nav-link');
-console.log(navLinks);
+console.log(menuContent);
 navLinks.forEach((navLink)=>{
     navLink.addEventListener('click',()=>{
         hamState = false;
         hamMask.classList.remove('mask-open');
         document.body.style.overflow = 'visible';
+        menuContent.classList.remove('menuOpen');
+        lines[0].classList.remove('line-top');
+        lines[1].classList.remove('line-middle');
+        lines[2].classList.remove('line-bottom');
     })
 })
+
 
 
 // test
