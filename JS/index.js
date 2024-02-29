@@ -244,6 +244,33 @@ function clickCopy(event) {
 
 }
 
+// 漢堡條開關
+const hamBtn = document.querySelector('.ham-menu');
+const hamMask = document.querySelector('.menu-mask');
+let hamState = false;
+hamBtn.addEventListener('click',()=>{
+    hamState = !hamState;
+    console.log(hamState);
+    if(hamState){
+        hamMask.classList.add('mask-open');
+        document.body.style.overflow = 'hidden';
+
+    }else{
+        hamMask.classList.remove('mask-open');
+        document.body.style.overflow = 'visible';
+    }
+})
+// 點擊連結關閉菜單
+const navLinks = document.querySelectorAll('.nav-link');
+console.log(navLinks);
+navLinks.forEach((navLink)=>{
+    navLink.addEventListener('click',()=>{
+        hamState = false;
+        hamMask.classList.remove('mask-open');
+        document.body.style.overflow = 'visible';
+    })
+})
+
 
 // test
 

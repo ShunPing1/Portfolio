@@ -117,7 +117,7 @@ html {
             align-items: center;
             padding: 0 15px;
             position: fixed;
-            z-index: 2;
+            z-index: 4;
 
             .ham-menu {
                 width: 50px;
@@ -194,7 +194,6 @@ html {
                 right: 0;
             }
         }
-
         // nav RWD
         @media (min-width: 768px) {
             nav {
@@ -215,6 +214,22 @@ html {
                 }
 
             }
+        }
+
+        .menu-mask{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+        .mask-open{
+            display: block;
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
 
         main {
