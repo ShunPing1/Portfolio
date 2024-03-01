@@ -169,27 +169,27 @@ const boxes = document.querySelector('.boxes');
 let swiperArr = [
     {
         name: 'img-1',
-        number: 1,
-        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg',
-        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg',
+        workName: '人像',
+        imgPath: 'img/ps_work/human_after.png',
+        path: 'img/ps_work/human_finsh.png',
     },
     {
         name: 'img-2',
-        number: 2,
-        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg',
-        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg',
+        workName: '影像編修',
+        imgPath: 'img/ps_work/wedding_after.png',
+        path: 'img/ps_work/wedding_finish.png',
     },
     {
         name: 'img-3',
-        number: 3,
-        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg',
-        path: 'http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg',
+        workName: 'Mockup',
+        imgPath: 'img/ps_work/mockup.png',
+        path: 'img/ps_work/Mockup_finish.png',
     },
     {
         name: 'img-4',
-        number: 4,
-        imgPath: 'http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg',
-        path: 'img/Ai.png',
+        workName: '影像合成',
+        imgPath: 'img/ps_work/synthesis_finish.png',
+        path: 'img/ps_work/synthesis_final.png',
     },
 ];
 let dataSetArr = [
@@ -202,7 +202,7 @@ dataSetArr.forEach((dataSet) => {
         boxes.innerHTML += `
         <div class="box" style="background-image: url(${item.imgPath});">
             <a class="example-image-link" href="${item.path}" data-lightbox="${dataSet}" target="_blank">
-                <div class="mask">${item.number}</div>
+                <div class="mask">${item.workName}</div>
             </a>
         </div>
         `;

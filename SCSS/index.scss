@@ -47,7 +47,7 @@ hr {
     height: 3px;
     border: none;
     background: radial-gradient(ellipse, $titleColor, transparent);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 
@@ -481,7 +481,6 @@ html {
                         width: 100%;
                         margin: auto;
                         background-color: #000;
-                        margin-top: 20px;
                         padding: 20px 0;
                         overflow: hidden;
                         position: relative;
@@ -511,12 +510,12 @@ html {
                                     justify-content: center;
                                     align-items: center;
                                     z-index: 3;
-                                    font-size: 60px;
+                                    font-size: 40px;
                                     text-align: center;
                                     transition: 1s;
 
                                     &:hover {
-                                        background-color: rgba(0, 0, 0, 0.5);
+                                        background-color: rgba(0, 0, 0, 0.6);
                                         color: #fff;
                                     }
                                 }
