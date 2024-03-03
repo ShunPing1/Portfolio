@@ -19,9 +19,6 @@
             width: 150px;
         }
 
-        .card-content{
-            margin-top: 100px;
-        }
 
 
         .nav-link.active {
@@ -37,21 +34,47 @@
 
         .tab-pane {
             background: linear-gradient(to top, #88f, #aaf, #0cf);
+            padding-bottom: 30px;
         }
 
-        .card-content{
+        .card-content {
             position: relative;
         }
 
-        .card-content::before{
-            content: attr(data-locName);
-            font-weight: bold;
+        .locName{
+            width: 100%;
             font-size: 50px;
+            text-align: center;
+            font-weight: bold;
             color: #fff;
-            position: absolute;
-            top: -50%;
-            left: 50%;
-            transform: translateX(-50%);
+            display: none;
+        }
+        .locName:nth-child(3n+1){
+           display: block;
+        }
+
+        @media (max-width: 990px) {
+            .nav-link{
+                border-radius: 5px !important;
+            }
+            .nav-item {
+                width: 70px;
+            }
+            .locName{
+                font-size: 40px;
+            }
+            .card-content-left,
+            .pic{
+                width: 100%;
+            }
+            .card-content-left *{
+                text-align: center;
+            }
+            .pic{
+                margin: 0 !important;
+                justify-content: center;
+            }
+
         }
     </style>
 
@@ -90,37 +113,37 @@
     <!-- weather card content -->
     <main class="container">
 
-        <div class="tab-content " id="myTabContent">
-            <div class="tab-pane fade show active mb-3 px-2 pt-3  border-0 rounded-bottom-4 fw-bold" id="home-tab-pane"
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active px-2 pt-3  border-0 rounded-bottom-4 fw-bold" id="home-tab-pane"
                 role="tabpanel" tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
+                <div class="card-all d-flex justify-content-center flex-wrap gap-4">
 
                 </div>
             </div>
             <div class="tab-pane fade  px-2 pt-3  border-0 rounded-bottom-4" id="north-tab-pane" role="tabpanel"
                 tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
+                <div class="card-all d-flex justify-content-center flex-wrap  gap-4">
                 </div>
             </div>
             <div class="tab-pane fade  px-2 pt-3  border-0 rounded-bottom-4" id="center-tab-pane" role="tabpanel"
                 tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
-                    
+                <div class="card-all d-flex justify-content-center flex-wrap  gap-4">
+
                 </div>
             </div>
             <div class="tab-pane fade  px-2 pt-3  border-0 rounded-bottom-4" id="south-tab-pane" role="tabpanel"
                 tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
+                <div class="card-all d-flex justify-content-center flex-wrap  gap-4">
                 </div>
             </div>
             <div class="tab-pane fade  px-2 pt-3  border-0 rounded-bottom-4" id="east-tab-pane" role="tabpanel"
                 tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
+                <div class="card-all d-flex justify-content-center flex-wrap  gap-4">
                 </div>
             </div>
             <div class="tab-pane fade  px-2 pt-3  border-0 rounded-bottom-4" id="island-tab-pane" role="tabpanel"
                 tabindex="0">
-                <div class="card-all d-flex justify-content-around flex-wrap">
+                <div class="card-all d-flex justify-content-center flex-wrap  gap-4">
                 </div>
             </div>
         </div>
@@ -215,10 +238,11 @@
                     // 生成內容
                     // locContent[index].innerHTML += `${loc}`;
                     for (let i = 0; i <= 2; i++) {
-                        const dayArr = ['今晚明晨','明日白天','明日晚上'];
+                        const dayArr = ['今晚明晨', '明日白天', '明日晚上'];
                         // 使用dataset改變CSS偽元素的content內容
                         cardResults[index].innerHTML += `
-                        <div class="card-content d-flex gap-5 mb-5 px-5 py-3 border-5 border-bottom rounded-top-3 border-dark-subtle  bg-light" data-locName="${loc}">
+                        <div class="locName">${loc}</div>
+                        <div class="card-content d-flex flex-wrap gap-3 px-5 py-3 border-5 border-bottom rounded-top-3 border-dark-subtle  bg-light" >
                             <div class="card-content-left">
                                 <h3 class="fw-bolder">${dayArr[i]}</h3>
                                 <p class="temperature m-0">
@@ -236,13 +260,13 @@
                         </div>`;
                     };
 
-          
+
 
                 };
             });
             // 宣告生成後的所有.card-content
             const cardContents = document.querySelectorAll('.card-content');
-            cardContents.forEach((cardContent,resultIndex) => {
+            cardContents.forEach((cardContent, resultIndex) => {
                 console.log(cardContent.dataset.locname);
                 // 判斷式判斷所有resultIndex % 3 == 1 的元素dataset設為空值達到隱藏CSS偽元素content內容
                 if (resultIndex % 3 !== 1) {
@@ -250,7 +274,7 @@
                 }
             })
         };
-       
+
 
 
 
@@ -270,7 +294,7 @@
                 './img/13.svg',
             ];
 
-            
+
             if (index == 1 && string.includes('晴天')) {
                 change = imgArr[0];
             } else if (index == 1 && string.includes('晴') && string.includes('多雲')) {
@@ -285,11 +309,11 @@
                 change = imgArr[5];
             } else if (index !== 1 && string.includes('晴天')) {
                 change = imgArr[6];
-            } else if (index !== 1 && string.includes('晴') && string.includes('多雲')){
+            } else if (index !== 1 && string.includes('晴') && string.includes('多雲')) {
                 change = imgArr[7];
-            } else if (index !== 1 && string.includes('多雲')){
+            } else if (index !== 1 && string.includes('多雲')) {
                 change = imgArr[8];
-            } else{
+            } else {
                 change = imgArr[9];
             };
             return change;

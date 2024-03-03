@@ -89,7 +89,7 @@ const portfoArr = [
         name: '前端工程',
         items: [
             '專案實作-龍格畫室',
-            '切版-微軟官網(RWD)',
+            '切版-微軟首頁(RWD)',
             'Bootstrap-RWD',
             'API串接-天氣小卡',
             '色弱遊戲',
@@ -104,11 +104,11 @@ const portfoArr = [
             'https://112-10-fcu-longer.dev-hub.io/',
         ],
         imgPaths: [
-            '',
-            '',
-            '',
-            '',
-            '',
+            'img/portfolio_img/longer.PNG',
+            'img/portfolio_img/microsoft.PNG',
+            'img/portfolio_img/bootstrap.PNG',
+            'img/portfolio_img/weatherCard.PNG',
+            'img/portfolio_img/colorGame.PNG',
             '',
         ],
     },
@@ -121,7 +121,7 @@ const portfoArr = [
             'https://github.com/ShunPing1',
         ],
         imgPaths: [
-            '',
+            'img/github.png',
         ],
     },
     {
@@ -135,8 +135,8 @@ const portfoArr = [
             'https://www.figma.com/proto/Cpw6KGxd4y9McQWWX45cJw/Untitled?type=design&node-id=54-257&t=47ncpxbpTed1rs7d-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A688&show-proto-sidebar=1',
         ],
         imgPaths: [
-            '',
-            '',
+            'img/portfolio_img/googleArt-figma.PNG',
+            'img/portfolio_img/app-figma.PNG',
         ],
     },
 ];
@@ -149,6 +149,8 @@ portfoArr.forEach((portfoItem) => {
             <a href="${portfoItem.paths[index]}" target="_blank">
                 <div class="img">
                     <h2>${item}</h2>
+                    <div class="bg-img" style="background-image: url(${portfoItem.imgPaths[index]});">
+                    </div>
                 </div>
             </a>
         `;
