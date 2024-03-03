@@ -14,8 +14,8 @@ let skillArr = [
             'img/tailwind.svg',
         ],
         dataSets: [
-            'HTML',
-            'CSS',
+            'HTML5',
+            'CSS3',
             'Javascript',
             'Vue.js',
             'Bootstrap',
@@ -69,7 +69,7 @@ skillArr.forEach((skill) => {
     let imgPathContent = '';
     let dataSetContent = '';
     skill.dataSets.forEach((dataSet, index) => {
-        dataSetContent += `<div class="skill-btn" data-skill="${dataSet}"  style="background-image: url(${skill.imgPaths[index]});"></div>`;
+        dataSetContent += `<div class="skill-btn" data-skill="${dataSet}" title="${dataSet}" style="background-image: url(${skill.imgPaths[index]});"></div>`;
     });
     skillContent.innerHTML += `
     <div>

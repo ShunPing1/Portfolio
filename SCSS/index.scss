@@ -336,21 +336,6 @@ html {
 
 
                                 }
-
-                                &:hover {
-                                    transform: rotateY(-180deg);
-                                    background-image: unset !important;
-
-                                    .fa-brands {
-                                        visibility: hidden;
-                                        transition: 0.1s;
-                                    }
-
-                                    &::after {
-                                        visibility: visible;
-                                        transform: translateX(-50%) rotateY(-180deg);
-                                    }
-                                }
                             }
                         }
                     }
