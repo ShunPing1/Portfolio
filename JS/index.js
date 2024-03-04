@@ -93,7 +93,7 @@ const portfoArr = [
             'Bootstrap-RWD',
             'API串接-天氣小卡',
             '色弱遊戲',
-            'Vue實作',
+            // 'Vue實作',
         ],
         paths: [
             'https://112-10-fcu-longer.dev-hub.io/',
@@ -101,7 +101,7 @@ const portfoArr = [
             'Bootstrap_practise/RWD/bootstrap-HW.html',
             'Bootstrap_practise/weather-card/weatherCard-bootstrap-HW.html',
             'JS_practise/color-game/color-blind-HW.html',
-            'https://112-10-fcu-longer.dev-hub.io/',
+            // '',
         ],
         imgPaths: [
             'img/portfolio_img/longer.PNG',
@@ -109,7 +109,7 @@ const portfoArr = [
             'img/portfolio_img/bootstrap.PNG',
             'img/portfolio_img/weatherCard.PNG',
             'img/portfolio_img/colorGame.PNG',
-            '',
+            // '',
         ],
     },
     {
