@@ -266,7 +266,9 @@ html {
                     .avator {
                         width: 180px;
                         height: 180px;
-                        background-color: #aaa;
+                        background-image: url('/img/avator.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
                         border: 5px solid $titleColor;
                         border-radius: 20px;
                         margin: auto;
