@@ -235,10 +235,8 @@
                 // 使用判斷式判斷頁籤所屬地區
                 if (locArr[index].includes(loc)) {
                     // 生成內容
-                    // locContent[index].innerHTML += `${loc}`;
                     const dayArr = ['今晚明晨', '明日白天', '明日晚上'];
                     for (let i = 0; i < dayArr.length; i++) {
-                        // 使用dataset改變CSS偽元素的content內容
                         cardResults[index].innerHTML += `
                         <div class="locName">${loc}</div>
                         <div class="card-content d-flex flex-wrap gap-3 px-5 py-3 border-5 border-bottom rounded-top-3 border-dark-subtle  bg-light" >
