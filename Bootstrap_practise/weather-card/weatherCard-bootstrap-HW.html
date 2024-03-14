@@ -236,8 +236,8 @@
                 if (locArr[index].includes(loc)) {
                     // 生成內容
                     // locContent[index].innerHTML += `${loc}`;
-                    for (let i = 0; i <= 2; i++) {
-                        const dayArr = ['今晚明晨', '明日白天', '明日晚上'];
+                    const dayArr = ['今晚明晨', '明日白天', '明日晚上'];
+                    for (let i = 0; i < dayArr.length; i++) {
                         // 使用dataset改變CSS偽元素的content內容
                         cardResults[index].innerHTML += `
                         <div class="locName">${loc}</div>
@@ -258,9 +258,6 @@
                             </div>
                         </div>`;
                     };
-
-
-
                 };
             });
         };
