@@ -66,7 +66,6 @@ let skillArr = [
     },
 ];
 skillArr.forEach((skill) => {
-    let imgPathContent = '';
     let dataSetContent = '';
     skill.dataSets.forEach((dataSet, index) => {
         dataSetContent += `<div class="skill-btn" data-skill="${dataSet}" title="${dataSet}" style="background-image: url(${skill.imgPaths[index]});"></div>`;
@@ -93,7 +92,6 @@ const portfoArr = [
             'Bootstrap-RWD',
             'API串接-天氣小卡',
             '色弱遊戲',
-            // 'Vue實作',
         ],
         paths: [
             'https://112-10-fcu-longer.dev-hub.io/',
@@ -101,7 +99,6 @@ const portfoArr = [
             'Bootstrap_practise/RWD/bootstrap-HW.html',
             'Bootstrap_practise/weather-card/weatherCard-bootstrap-HW.html',
             'JS_practise/color-game/color-blind-HW.html',
-            // '',
         ],
         imgPaths: [
             'img/portfolio_img/longer.PNG',
@@ -109,7 +106,6 @@ const portfoArr = [
             'img/portfolio_img/bootstrap.PNG',
             'img/portfolio_img/weatherCard.PNG',
             'img/portfolio_img/colorGame.PNG',
-            // '',
         ],
     },
     {
@@ -143,7 +139,6 @@ const portfoArr = [
 portfoArr.forEach((portfoItem) => {
 
     let itemsContent = '';
-
     portfoItem.items.forEach((item, index) => {
         itemsContent += `
             <a href="${portfoItem.paths[index]}" target="_blank">
