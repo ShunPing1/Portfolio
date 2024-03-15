@@ -327,14 +327,6 @@
     </div>
 
     <script>
-        // 需求 (11/20 檢討)
-        // 1. 要有得分 顯示在畫面上
-        // 2. 要能依據得分 增加等級
-        // 3. 答案的透明度要依據等級越來越不透明
-        // 4. 進入遊戲的時候 顏色不能定死
-        // 5. 承上 選到正解 要能換色換答案
-        // 6. 選錯 要有懲罰
-
         // 宣告變數-起始介面
         const interFaceStart = document.querySelector('.wrap-start');
         const interFaceGame = document.querySelector('.wrap-game');
@@ -587,6 +579,7 @@
         }
 
         //fn 重置關卡
+        reStart();
         function reStart() {
             score = 0;
             level = 1;
