@@ -12,6 +12,14 @@
         picture{
             width: 100%;
         }
+        /* 必須完全相同才成立 */
+        div[class ~= test]{
+            color: #faa;
+        }
+        /* 只要有包含就成立 */
+        div[class *= text]{
+            color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -30,5 +38,11 @@
         <source media="(min-width:540px)" srcset="./img/swiper/Surface-Laptop-859x540.avif">
         <img src="./img/swiper/Surface-Laptop-859x540.avif" alt="Flowers">
     </picture>
+
+
+
+
+    <div class="test ext">11111</div>
+    <div class="textT">11111</div>
 </body>
 </html>
